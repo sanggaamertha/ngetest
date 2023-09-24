@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>khusus kamu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .btn-lanjutkan {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+
+        @media screen and (max-width: 768px) {
+            .modal {
+                padding: 10px;
+            }
+
+            .tombol-besar {
+                cursor: pointer;
+                position: relative;
+                width: 100px;
+                height: 100px;
+                margin: 0 auto; /* Mengatur posisi tombol di tengah */
+            }
+
+            .tombol-besar img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .tombol-teks {
+                font-size: 16px;
+                color: white;
+                text-align: center;
+            }
+        
+            body {
+                background-image: url('pic/backgroundhp.jpg'); /* Ganti dengan URL gambar yang ingin Anda gunakan */
+                background-size: contain; 
+                 background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+            }
+
+            body {
+                background-color: #f0f0f0; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tombol-besar" onclick="tampilkanAlert()">
+        <img src="pic/lovefix.png" alt="Love Button">
+        
+    </div>
+    <audio autoplay>
+        <source src="musik/lagu.mp3" type="audio/mpeg">
+        
+    </audio>
+    <div class="container">
+        <!-- Tidak perlu gambar love di sini -->
+    </div>
+    <script src="script.js"></script>
+<div id="overlay" class="overlay">
+    <div class="modal">
+        <p> halooo, ada yang mau aku bilang sama kamuu PENTING!!!, KLIK LANJUTKAN KALO KAMU SAYANG SAMA AKU,
+           </p>
+           <p>KALO GA SAYANG TETEP KLIK LANJUTKAN &#x1F601&#x261D</p> 
+        <button class="btn-lanjutkan" onclick="tutupAlert2()">close</button>
+
+       <button class="btn-lanjutkan" onclick="tampilkanAlert2()">lanjutkan</button>
+
+    </div>
+</div>
+
+<div id="overlay2" class="overlay">
+    <div class="modal">
+        <p>haloo lala sayangg, aku boleh bilang sesuatu gaa? kamu baca yaa? aku sayang, sayang banget pokoknya sama kamuu, </p>
+        <p>aku minta maaf ya kalau selama ini sikap aku kadang bikin kamu marah ataupun bikin kamu cape ngadepin akuu padahal</p>
+        <p>masalah yang timbul itu masalah sepelee gatau juga dari akunya ajaa yang kepikirann &#x1F614&#x1F614, aku sayang sama kamu </p>  
+        <p>tapi maaf kalau aku belum bisa jadi apa yang kamu mau, aku menyayangimu dengan cara aku. maka dari itu aku butuh kamu,</p>  
+        <p>tegur aku kalo aku salah ajarin aku bagaimana caranya agar bisa jadi orang yang kamu cari selama ini, jangan tinggalin</p>
+        <p>akuu ya? aku sayang banget sama kamuuuuu, happy 3 months babeee &#x1F497&#x1F497&#x1F497</p>
+        <button class="btn-lanjutkan" onclick="tampilkanAlert3()">lanjutkan</button>
+    </div>
+</div>
+<div id="overlay3" class="overlay">
+    <div class="modal">
+        <p>jadi mau ga kamu jadi orang yang bakal selalu dampingin aku, di jawab yaa</p>
+        <button class="btn-lanjutkan" onclick="tampilkanAlert4()">mau banget</button>
+
+       
+        <button class="btn-lanjutkan" onclick="tampilkanAlert4()">iya aku mau</button>
+
+    </div>
+</div>
+<div id="overlay4" class="overlay">
+    <div class="modal">
+        <p> selamat kamu kena prank</p>
+        
+        <button class="btn-lanjutkan" onclick="tampilkanAlert5()">lanjutkan</button>
+    </div>
+</div>
+<div id="overlay5" class="overlay">
+    <div class="modal">
+        <p> babi lu</p>
+        
+        <button class="btn-lanjutkan" onclick="tutupAlert()">OK</button>
+    </div>
+</div>
+
+<script>
+    function tampilkanAlert() {
+        var overlay = document.getElementById("overlay");
+        overlay.style.display = "flex";
+    }
+    function tampilkanAlert2() {
+        var overlay = document.getElementById("overlay2");
+        var overlay1 = document.getElementById("overlay");
+        overlay.style.display = "flex";
+        overlay1.style.display = "none";
+    }
+    function tampilkanAlert3() {
+        var overlay = document.getElementById("overlay3");
+        var overlay2 = document.getElementById("overlay2");
+        overlay.style.display = "flex";
+        overlay2.style.display = "none";
+    }
+    function tampilkanAlert4() {
+        var overlay = document.getElementById("overlay4");
+        var overlay3 = document.getElementById("overlay3");
+        overlay.style.display = "flex";
+        overlay3.style.display = "none";
+    }
+    function tampilkanAlert5() {
+        var overlay = document.getElementById("overlay5");
+        var overlay4 = document.getElementById("overlay4");
+        overlay.style.display = "flex";
+        overlay4.style.display = "none";
+    }
+    
+
+    function tutupAlert() {
+        
+        var overlay5 = document.getElementById("overlay5");
+        
+        overlay5.style.display = "none";
+    }
+    function tutupAlert2() {
+        
+        var overlay6 = document.getElementById("overlay");
+        
+        overlay6.style.display = "none";
+    }
+
+    
+
+    function lanjutkan() {
+
+        alert("mantap");
+        tutupAlert();
+    }
+</script>
+
+</body>
+</html>
