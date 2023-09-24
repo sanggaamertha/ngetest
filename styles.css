@@ -1,0 +1,68 @@
+body {
+    background-color: #f0f0f0; /* Ganti dengan kode warna yang Anda inginkan */
+  }
+  
+ 
+  body {
+    background-image: url('pic/backgroundfile.jpg'); /* Ganti dengan URL gambar yang ingin Anda gunakan */
+    background-size: contain; 
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+  }
+
+  .tombol-besar {
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.tombol-besar img {
+    width: 150px; /* Sesuaikan ukuran gambar dengan kebutuhan Anda */
+    height: 150px;
+    position: relative;
+}
+
+.tombol-teks {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+}
+
+.teks-di-dalam-gambar {
+    position: absolute;
+    top: 50%;
+    text-align: justify;
+    margin-left: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #fff;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.love {
+  position: absolute;
+  width: 30px; /* Sesuaikan ukuran love */
+  height: 35px;
+  background-image: url('pic/love.png'); /* Ganti dengan path gambar love Anda */
+  background-size: cover;
+  transform-origin: center;
+}
+
+@keyframes falling {
+  0% {
+      transform: translateY(-10vh) translateX(0) rotate(0deg);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(110vh) translateX(20vw) rotate(360deg); /* Ubah nilai transform */
+      opacity: 0;
+  }
+}
